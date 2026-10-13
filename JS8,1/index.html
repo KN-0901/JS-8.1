@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app-container">
+        <h1>Photo Gallery Board</h1>
+        <p class="subtitle">Add an image using a filename or web URL.</p>
+
+        <section class="control-card">
+            <h2 class="card-title">📸 Add one of your photos</h2>
+            <div class="input-row">
+                <button type="button" class="btn-sample" onclick="fillSample('1.jpg')">Photo 1</button>
+                <button type="button" class="btn-sample" onclick="fillSample('2.jpg')">Photo 2</button>
+                <button type="button" class="btn-sample" onclick="fillSample('3.jpg')">Photo 3</button>
+                <button type="button" class="btn-sample" onclick="fillSample('4.jpg')">Photo 4</button>
+                <button type="button" class="btn-sample" onclick="fillSample('5.jpg')">Photo 5</button>
+                <button type="button" class="btn-sample" onclick="fillSample('6.jpg')">Photo 6</button>
+            </div>
+        </section>
+
+        <section class="control-card">
+            <h2 class="card-title">🔗 Add an image URL or filename</h2>
+            <div class="input-row">
+                <input
+                    type="text"
+                    id="imageInput"
+                    placeholder="For example: 1.jpg or https://..."
+                    aria-label="Image filename or URL"
+                >
+                <button type="button" class="btn-add" id="addImageBtn">
+                    Add Image
+                </button>
+            </div>
+        </section>
+
+        <section
+            class="gallery-grid"
+            id="galleryContainer"
+            aria-label="Image gallery"
+        ></section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
